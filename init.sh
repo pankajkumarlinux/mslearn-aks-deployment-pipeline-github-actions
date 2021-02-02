@@ -3,7 +3,7 @@
 echo "Defining variables..."
 export RESOURCE_GROUP_NAME=mslearn-gh-pipelines-$RANDOM
 export AKS_NAME=contoso-video
-export ACR_NAME=ContosoContainerRegistry$RANDOM
+export ACR_NAME=ContosoContainerRegistry1234567$RANDOM
 declare DNS_GROUP_NAME=$RESOURCE_GROUP_NAME
 
 echo "Searching for resource group..."
