@@ -45,7 +45,7 @@ jobs:
       - name: Run Helm Deploy
         run: |
           helm upgrade \
-            --install \
+            --delete \
             --create-namespace \
             --namespace staging \
                 contoso-website \
