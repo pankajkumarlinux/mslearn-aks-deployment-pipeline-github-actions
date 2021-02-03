@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # Create image pull secret for ACR
-    - uses: azure/k8s-create-secret@v1
+      - uses: azure/k8s-create-secret@v1
       with:
         container-registry-url: ${{ secrets.ACR_NAME }}.azurecr.io
         container-registry-username: ${{ secrets.ACR_LOGIN  }}
