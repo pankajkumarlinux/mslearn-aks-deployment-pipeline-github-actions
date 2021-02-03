@@ -4,3 +4,5 @@ image:
   tag: latest
 dns:
   name: c6118a2537834e6f868f.eastus.aksapp.io
+mysecret:
+  name: test

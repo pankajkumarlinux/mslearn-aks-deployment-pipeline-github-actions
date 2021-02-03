@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]
 
+env:
+  NAMESPACE: staging
+
+  
 jobs:
   build_push_image:
     runs-on: ubuntu-latest
@@ -26,6 +30,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      # Create image pull secret for ACR
+    - uses: azure/k8s-create-secret@v1
+      with:
+        container-registry-url: ${{ secrets.ACR_NAME }}.azurecr.io
+        container-registry-username: ${{ secrets.ACR_LOGIN  }}
+        container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
+        secret-name: ${{ secrets.MYSECRET }}
+        namespace: ${{ env.NAMESPACE }}
+        force: true
 
       - name: Install Helm
         uses: Azure/setup-helm@v1
@@ -52,3 +66,4 @@ jobs:
                 ./kubernetes/contoso-website \
             --set image.repository=${{ secrets.ACR_NAME }} \
             --set dns.name=${{ secrets.DNS_NAME }}
+            --set mysecret=${{ secrets.MYSECRET }}

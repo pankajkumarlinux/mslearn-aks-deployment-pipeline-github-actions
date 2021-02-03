@@ -25,3 +25,5 @@ spec:
           ports:
             - containerPort: 80
               name: http
+          imagePullSecrets:
+            - name: {{ .Values.mysecret.name }}
