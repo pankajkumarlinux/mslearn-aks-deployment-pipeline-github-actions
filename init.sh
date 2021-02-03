@@ -1,9 +1,9 @@
 #!/bin/bash
-
+number=$RANDOM
 echo "Defining variables..."
-export RESOURCE_GROUP_NAME=mslearn-gh-pipelines-$RANDOM
+export RESOURCE_GROUP_NAME=mslearn-gh-pipelines-$number
 export AKS_NAME=contoso-video
-export ACR_NAME=ContosoContainerRegistry12345678$RANDOM
+export ACR_NAME=ContosoContainerRegistry1234567$number
 declare DNS_GROUP_NAME=$RESOURCE_GROUP_NAME
 
 echo "Searching for resource group..."
