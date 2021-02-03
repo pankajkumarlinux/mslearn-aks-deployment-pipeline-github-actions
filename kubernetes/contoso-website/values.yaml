@@ -3,6 +3,6 @@ image:
   name: contoso-website
   tag: latest
 dns:
-  name: c6118a2537834e6f868f.eastus.aksapp.io
+  name: f91210b59af347898926.eastus.aksapp.io
 mysecret:
   name: test
