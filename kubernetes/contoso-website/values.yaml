@@ -1,8 +1,8 @@
 image:
-  registry: contosocontainerregistry1234567.azurecr.io
+  registry: xyz.register.co
   name: contoso-website
   tag: latest
 dns:
-  name: f91210b59af347898926.eastus.aksapp.io
+  name: dnstest.io
 mysecret:
   name: test
