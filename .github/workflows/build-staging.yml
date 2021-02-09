@@ -65,6 +65,7 @@ jobs:
             --install \
             --create-namespace \
             --namespace staging \
+            --recreate-pods \
                 contoso-website \
                 ./kubernetes/contoso-website \
             --set image.registry=${{ secrets.ACR_NAME }} \
