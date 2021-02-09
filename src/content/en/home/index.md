@@ -1,6 +1,6 @@
 ---
-title: "We are Contoso"
+title: "We are Devops"
 headless: true
 ---
 
-We're the next level drone making company
+We're the next level Devops  company
