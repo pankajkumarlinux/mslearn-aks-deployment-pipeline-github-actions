@@ -8,7 +8,7 @@ metadata:
     kubernetes.io/ingress.class: addon-http-application-routing
 spec:
   rules:
-    - host: devOps-{{ default "staging" .Release.Namespace }}.{{ .Values.dns.name }}
+    - host: devops-{{ default "staging" .Release.Namespace }}.{{ .Values.dns.name }}
       http:
         paths:
           - backend: # How the ingress will handle the requests
