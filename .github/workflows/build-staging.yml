@@ -68,4 +68,5 @@ jobs:
                 contoso-website \
                 ./kubernetes/contoso-website \
             --set image.registry=${{ secrets.ACR_NAME }} \
+            --set image.tag="latest" \
             --set dns.name=${{ secrets.DNS_NAME }}
